@@ -1,0 +1,24 @@
+{
+  "upstream_revision": "a85815a42757630ce188fdad368c2dfc444d4773",
+  "fonttools": "4.63.0",
+  "fonts": {
+    "chinese.ttf": {
+      "sha256": "8ec920e3a545ff64bbb07c70f3f8a112771fe7b75267df267b7e4cab9299ed33",
+      "source": "NotoSansSC.ttf",
+      "family": "Horizon Link Sans",
+      "weight": 400
+    },
+    "gain_label.ttf": {
+      "sha256": "f1b3f98368621a815ceaf6ed7a548e953952c00d3f9e64fc93c08fbc060cc741",
+      "source": "NotoSansSC.ttf",
+      "family": "Horizon Link Gain",
+      "weight": 700
+    },
+    "dashboard.ttf": {
+      "sha256": "bda0bfa73c4f08f035cf677f9a3739be520cb827cda3fd4062694d134e2ed826",
+      "source": "BarlowCondensed-SemiBold.ttf",
+      "family": "Horizon Link Dashboard",
+      "weight": 600
+    }
+  }
+}

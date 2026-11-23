@@ -1,0 +1,46 @@
+// Project-local cache adapter; upstream downloads remain verified HTTPS to official hosts.
+def cacheRepository = { repository ->
+    if (repository instanceof org.gradle.api.artifacts.repositories.MavenArtifactRepository) {
+        def original = repository.url.toString()
+        def endpoint = null
+        if (original.startsWith('https://plugins.gradle.org/m2')) endpoint = 'plugins'
+        else if (original.startsWith('https://repo.maven.apache.org/maven2') || original.startsWith('https://repo1.maven.org/maven2')) endpoint = 'central'
+        else if (original.startsWith('https://dl.google.com/dl/android/maven2') || original.startsWith('https://maven.google.com')) endpoint = 'google'
+        else if (original.startsWith('https://storage.googleapis.com/download.flutter.io')) endpoint = 'flutter'
+        else if (original.startsWith('http://127.0.0.1:18765/')) endpoint = original.split('/').findAll { it }.last()
+        if (endpoint != null) {
+            repository.url = uri("http://127.0.0.1:18765/${endpoint}/")
+            repository.allowInsecureProtocol = true // Loopback only; TLS is verified upstream.
+            repository.content {
+                if (endpoint == 'google') {
+                    includeGroupByRegex('com\\.android.*')
+                    includeGroupByRegex('androidx\\..*')
+                    includeGroupByRegex('com\\.google\\.(android|firebase|gms|testing|mlkit).*')
+                } else if (endpoint == 'plugins') {
+                    includeModuleByRegex('.*', '.*\\.gradle\\.plugin')
+                    includeGroup('org.gradle.kotlin')
+                } else if (endpoint == 'flutter') {
+                    includeGroup('io.flutter')
+                } else if (endpoint == 'central') {
+                    excludeGroup('io.flutter')
+                }
+            }
+        }
+    }
+}
+gradle.beforeSettings { settings ->
+    settings.pluginManagement.repositories {
+        maven { name = 'HorizonOfficialPlugins'; url = uri('http://127.0.0.1:18765/plugins/'); allowInsecureProtocol = true }
+        maven { name = 'HorizonOfficialGoogle'; url = uri('http://127.0.0.1:18765/google/'); allowInsecureProtocol = true }
+        maven { name = 'HorizonOfficialCentral'; url = uri('http://127.0.0.1:18765/central/'); allowInsecureProtocol = true }
+        configureEach { cacheRepository(it) }
+    }
+}
+gradle.settingsEvaluated { settings ->
+    settings.dependencyResolutionManagement.repositories.configureEach { cacheRepository(it) }
+}
+gradle.beforeProject { project ->
+    project.repositories.configureEach { cacheRepository(it) }
+    project.buildscript.repositories.configureEach { cacheRepository(it) }
+}
+

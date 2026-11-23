@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/google/fonts",
+  "revision": "a85815a42757630ce188fdad368c2dfc444d4773",
+  "files": [
+    {"file": "NotoSansSC.ttf", "path": "ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf", "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"},
+    {"file": "NotoSansSC-OFL.txt", "path": "ofl/notosanssc/OFL.txt", "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"},
+    {"file": "BarlowCondensed-SemiBold.ttf", "path": "ofl/barlowcondensed/BarlowCondensed-SemiBold.ttf", "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"},
+    {"file": "BarlowCondensed-OFL.txt", "path": "ofl/barlowcondensed/OFL.txt", "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"}
+  ]
+}

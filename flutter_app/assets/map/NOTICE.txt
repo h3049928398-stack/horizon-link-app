@@ -1,0 +1,8 @@
+Map background and road geometry: extracted read-only from the user's installed Forza Horizon 6 game.
+WVAN extraction/parser and graph compilation tooling: atikhobaev/fh6-scenic-navigator, MIT. Full copyright and license: assets/licenses/fh6-scenic-navigator-MIT.txt in the app bundle; scripts/vendor/fh6_nav/LICENSE in the source project. Also available under Settings > Open-source licenses > FH6 Scenic Navigator.
+https://github.com/atikhobaev/fh6-scenic-navigator/tree/main/fh6_nav
+Community map coordinates: Forza Horizon Hub and the per-item sources retained in places.json. These are not confirmed game-extracted POIs.
+https://forzahorizonhub.com/map
+World-coordinate projection calibration: static/nav_logic.js from the MIT-licensed FH6 Scenic Navigator project cited above; not yet independently verified in game.
+Application route guidance is independently implemented and is not the game's navigation engine.
+Bilingual place-name overlay: matched read-only from the user's installed CHS/EN string tables. Per-record table/IDS provenance and source archive hashes are retained in place_names.json. Name matching does not validate community coordinates. Generic bonus-board and track-geometry labels are application copy; unmatched names retain their original spelling.
