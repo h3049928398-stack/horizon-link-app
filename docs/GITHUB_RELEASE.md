@@ -1,10 +1,14 @@
 # GitHub 版本发布
 
-公开项目与 Android 下载入口见 [GitHub Releases](https://github.com/h3049928398-stack/horizon-link-app/releases)。`horizon-link` 保存发布前的开发历史及 v0.2.0 调试预发布。
+公开项目与 Android 下载入口见 [GitHub Releases](https://github.com/h3049928398-stack/horizon-link-app/releases)。`horizon-link` 提供 v0.2.0 调试预发布。
+
+## v0.3.1 Android
+
+- 「设置 → 关于与隐私」中的「开发者」默认折叠，点击展开或收起姓名。版本号为 `0.3.1+4`。见 [Android 更新说明](releases/v0.3.1-android.md)。
 
 ## v0.3.0 Android（2026-11-23）
 
-- [v0.3.0](https://github.com/h3049928398-stack/horizon-link-app/releases/tag/v0.3.0) 已作为正式最新版发布。附件为 `Horizon-Link-v0.3.0-android.apk` 和 `SHA256SUMS.txt`。见 [Android 更新说明](releases/v0.3.0-android.md)。
+- [v0.3.0](https://github.com/h3049928398-stack/horizon-link-app/releases/tag/v0.3.0) 提供 `Horizon-Link-v0.3.0-android.apk` 和 `SHA256SUMS.txt`。见 [Android 更新说明](releases/v0.3.0-android.md)。
 - APK 使用备案对应证书签名。已核对 `com.horizonlink.horizon_link`、`0.3.0+3`、最低 API 24、目标 API 36、三种 ABI 及合并后的权限。APK 为 68,471,082 字节，SHA-256 为 `6111ea1110f4831efe2abd7ed30b12ec0776aea2645972bfd6d947479718d058`。
 - 腾讯云已核对备案号 `赣ICP备2026030532号-2A`、包名和证书指纹。正式构建使用 [双语隐私政策](PRIVACY.md)。真机安装和从调试签名迁移单独验收。
 

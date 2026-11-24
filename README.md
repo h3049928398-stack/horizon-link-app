@@ -6,7 +6,7 @@ Horizon Link 是面向《极限竞速：地平线 6》（FH6）玩家的手机�
 
 ## 下载与连接
 
-**[下载 Android v0.3.0](https://github.com/h3049928398-stack/horizon-link-app/releases/download/v0.3.0/Horizon-Link-v0.3.0-android.apk)** · [更新说明与校验文件](https://github.com/h3049928398-stack/horizon-link-app/releases/tag/v0.3.0)
+**[下载最新 Android 版](https://github.com/h3049928398-stack/horizon-link-app/releases/latest)** · 同页提供更新说明与 SHA-256 校验文件。
 
 正式签名版需要 **Android 7.0（API 24）或以上版本**，支持 `arm64-v8a`、`armeabi-v7a` 和 `x86_64`。可用 Release 提供的 `SHA256SUMS.txt` 核对 APK 完整性。Windows 可运行 `Get-FileHash .\文件名.apk -Algorithm SHA256`。
 

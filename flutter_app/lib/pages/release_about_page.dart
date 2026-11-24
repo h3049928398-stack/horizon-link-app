@@ -28,9 +28,20 @@ class ReleaseAboutPage extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          ExpansionTile(
             title: Text(copy('开发者', 'Developer')),
-            subtitle: SelectableText(info(ReleaseInfo.developer)),
+            childrenPadding: const EdgeInsetsDirectional.fromSTEB(
+              16,
+              0,
+              16,
+              16,
+            ),
+            children: [
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: SelectableText(info(ReleaseInfo.developer)),
+              ),
+            ],
           ),
           ListTile(
             title: Text(copy('支持与隐私联系', 'Support & privacy contact')),

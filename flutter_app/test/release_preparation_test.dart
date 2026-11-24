@@ -10,6 +10,7 @@ import 'package:horizon_link/core/racing.dart';
 import 'package:horizon_link/core/telemetry.dart';
 import 'package:horizon_link/core/web_navigation.dart';
 import 'package:horizon_link/pages/data_management_page.dart';
+import 'package:horizon_link/pages/release_about_page.dart';
 import 'package:horizon_link/privacy_bootstrap.dart';
 import 'package:horizon_link/services/privacy_consent.dart';
 import 'package:horizon_link/services/release_info.dart';
@@ -79,6 +80,31 @@ void main() {
   });
 
   for (final en in [false, true]) {
+    testWidgets('about page reveals the developer only on tap ($en)', (
+      tester,
+    ) async {
+      final app = QuietController()..settings.language = en ? 'en' : 'zh';
+      addTearDown(app.dispose);
+      final developer = ReleaseInfo.developer.isNotEmpty
+          ? ReleaseInfo.developer
+          : (en ? 'Pending before release' : '发布前待补充');
+      final heading = en ? 'Developer' : '开发者';
+      final row = find.widgetWithText(ExpansionTile, heading);
+      final name = find.descendant(of: row, matching: find.text(developer));
+
+      await tester.pumpWidget(MaterialApp(home: ReleaseAboutPage(app: app)));
+      expect(row, findsOneWidget);
+      expect(name, findsNothing);
+
+      await tester.tap(find.text(heading));
+      await tester.pumpAndSettle();
+      expect(name, findsOneWidget);
+
+      await tester.tap(find.text(heading));
+      await tester.pumpAndSettle();
+      expect(name, findsNothing);
+    });
+
     testWidgets('privacy gate does not create services before consent ($en)', (
       tester,
     ) async {
