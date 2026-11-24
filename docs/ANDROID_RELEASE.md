@@ -2,6 +2,8 @@
 
 GitHub 发行记录见 [GitHub 版本发布](GITHUB_RELEASE.md)。Android `v0.3.0`（构建号 `3`）已使用备案对应的正式签名发布。历史版本 `v0.2.0` 使用调试签名，从该版本迁移前请先完成备份验证。
 
+`0.3.2+5` 反馈候选版须在 [问题反馈联调](PROBLEM_FEEDBACK.md) 完成后发行。候选公开元数据位于 `artifacts/problem-feedback/public-metadata-candidate.json`。正式构建使用 `-MetadataPath` 指定已确认生效日期的资料，并核对包内及在线隐私政策的 `2026-11-24.1` 版本。
+
 应用名称为 Horizon Link，包名为 `com.horizonlink.horizon_link`，免费且无广告。腾讯云已确认 APP 备案号 `赣ICP备2026030532号-2A`，正式签名文件的公开证书指纹与备案信息一致。在线文本见 [隐私政策](PRIVACY.md)。
 
 ## 主体与签名

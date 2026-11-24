@@ -11,9 +11,11 @@ import '../widgets/ios_glass_controls.dart';
 import 'dashboard_screen.dart';
 import '../widgets/connection_tutorial.dart';
 import '../services/release_info.dart';
+import '../services/problem_feedback.dart';
 import '../widgets/version_check_tile.dart';
 import 'release_about_page.dart';
 import 'data_management_page.dart';
+import 'problem_feedback_page.dart';
 
 class SettingsPage extends StatelessWidget {
   final AppController app;
@@ -176,6 +178,24 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
           ),
+          if (feedbackPlatform case final platform?)
+            ListTile(
+              key: const ValueKey('problem-feedback'),
+              leading: const Icon(Icons.feedback_outlined),
+              title: Text(
+                app.settings.language == 'en' ? 'Report a problem' : '问题反馈',
+              ),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (_) => ProblemFeedbackPage(
+                    english: app.settings.language == 'en',
+                    platform: platform,
+                  ),
+                ),
+              ),
+            ),
           ListTile(
             key: const ValueKey('open-source-licenses'),
             leading: const Icon(Icons.description_outlined),

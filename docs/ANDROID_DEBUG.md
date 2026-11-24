@@ -79,3 +79,7 @@ cd flutter_app
 ## 2026-11-20 驾驶仪表亮屏验收
 
 覆盖安装包含交接第 86 节改动的包后，观察设备当前的熄屏时间。进入普通及全屏驾驶，在没有触摸且等待 UDP 的情况下各停留超过该时长。再退出驾驶或打开遥测记录，确认恢复自动熄屏。切后台并返回驾驶时再次检查。计时验收可在拔掉 USB 后进行，避免开发者选项的充电时保持唤醒影响结果。应用通过窗口的 `FLAG_KEEP_SCREEN_ON` 请求亮屏。[Android 屏幕常亮说明](https://developer.android.com/develop/background-work/background-tasks/awake/screen-on)
+
+## 2026-11-24 问题反馈
+
+手机当前是正式签名的 `0.3.0+3`。使用英文源码副本构建 `0.3.2+5`，仅在副本中将包名改为 `com.horizonlink.horizon_link.feedbackqa`，标签为「Horizon Link QA」。APK 经英文路径暂存，安装目标已核对。手机返回 `INSTALL_FAILED_USER_RESTRICTED`，需要手机端允许 USB 安装。复查独立包未安装，正式包的版本和更新时间未变。见 `artifacts/problem-feedback/android-qa-build.log` 和 [反馈验收说明](PROBLEM_FEEDBACK.md)。

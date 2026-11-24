@@ -7,7 +7,7 @@ abstract final class ReleaseInfo {
   static const policyUrl = String.fromEnvironment('PRIVACY_POLICY_URL');
   static const effectiveDate = String.fromEnvironment('PRIVACY_EFFECTIVE_DATE');
   static const filing = String.fromEnvironment('APP_FILING_NUMBER');
-  static const policyVersion = '2026-11-23.1';
+  static const policyVersion = '2026-11-24.1';
   static const channel = MethodChannel('horizon_link/documents');
 
   static Future<String> installedVersion() async {

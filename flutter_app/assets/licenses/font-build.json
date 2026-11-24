@@ -3,7 +3,7 @@
   "fonttools": "4.63.0",
   "fonts": {
     "chinese.ttf": {
-      "sha256": "8ec920e3a545ff64bbb07c70f3f8a112771fe7b75267df267b7e4cab9299ed33",
+      "sha256": "f6e644d617a62fe8ea75fe3e21c8a459307a626d8f51ac6ae024ff0fcc8e7f2d",
       "source": "NotoSansSC.ttf",
       "family": "Horizon Link Sans",
       "weight": 400

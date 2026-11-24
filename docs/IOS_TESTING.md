@@ -116,3 +116,7 @@ Windows 可使用 [Sideloadly 官方站点](https://sideloadly.io/) 提供的工
 ## 驾驶仪表亮屏验收
 
 使用包含交接第 86 节改动的包同身份覆盖安装。在普通驾驶和全屏驾驶各停留超过 iPhone 当前的自动锁定时长，期间无需触屏或收到 UDP，确认仪表持续显示。打开遥测记录、退出仪表或切后台后检查自动锁定是否恢复，再回到驾驶确认保持亮屏。iPhone 测试需要启用有限的系统自动锁定时长。应用使用 UIKit 的 `isIdleTimerDisabled`。[Apple 自动锁定 API](https://developer.apple.com/documentation/uikit/uiapplication/isidletimerdisabled)
+
+## 问题反馈验收（2026-11-24）
+
+Android 和 iOS 共用反馈页面与 HTTPS 契约。Windows Flutter 测试以 iOS 平台配置打开「设置 → 关于与帮助 → 问题反馈」。本轮没有 Xcode 构建、IPA 或 iPhone 安装。网站接口就绪后，在同身份安装包上确认新版隐私告知、中英文表单、键盘下的发送按钮、VoiceOver 对错误和成功回执的播报、断网重试和实际后台收件。见 [反馈协议](PROBLEM_FEEDBACK.md)。

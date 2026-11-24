@@ -10,5 +10,6 @@
 - [性能优化与测量](PERFORMANCE.md)
 - [每周活动协议](WEEKLY_CONTENT.md) / [手机内容网关](WEEKLY_GATEWAY.md)
 - [攻略网页地址更新：网站项目对接契约](WEEKLY_GUIDE_URL_HANDOFF.md)
+- [问题反馈接口与网站接手提示词](PROBLEM_FEEDBACK.md)
 
 新记录先确定是否属于本工程，其他项目的工作必须记录到其自己的项目目录。

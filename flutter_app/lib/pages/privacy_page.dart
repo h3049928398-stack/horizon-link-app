@@ -22,11 +22,14 @@ After agreement, the app requests public JSON from Tencent Cloud COS over HTTPS.
 3. Websites and browser
 WebView is created only when you choose to open a guide. Xiaoheihe and Forza websites receive network requests and may use cookies, web storage and account information you enter under their own policies. The app does not read your passwords. Other HTTPS sites require confirmation before opening in your system browser. My Forza also opens in the system browser. Browser data is managed by that browser. Withdrawing consent clears this app's WebView cookies and local web storage.
 
-4. Permissions, export and retention
-Android internet/network access supports UDP and content/web reading. The app does not request phone location, contacts, microphone, camera or broad storage permissions. It contains no advertising or analytics SDK. Copying JSON writes the selected record to the system clipboard. File backup/restore uses the Android document picker; the destination provider you choose may be a cloud drive. Backup files contain settings and recordings in plain text: keep them private. Weekly cache, web cookies and privacy consent are excluded. Imported backups never grant consent.
+4. Problem reports
+When you tap Send feedback, the app sends your description, platform, app version if available, and a random reference number over HTTPS to the developer's website, ninaaa.cloud. The website receives your network IP address when handling the request. The developer uses reports to investigate problems, restricts access to authorized site administrators, and retains reports for up to 90 days. The app attaches no settings, driving records, location, device identifiers or logs. Please leave out passwords and personal information. Use the contact above and include your reference number to request deletion.
 
-5. Your choices
-Before agreement, no UDP listener, address scan, weekly request or WebView is started. You can decline, read this notice, or return later. Review this notice and withdraw in Settings; withdrawal stops these services and returns to the notice without deleting settings or recordings. Data management lets you back up, restore or delete recordings. Android app-data clearing/uninstall removes local data; export and verify a backup first. A changed policy version requires agreement again. Contact the address above for privacy requests.
+5. Permissions, export and retention
+Android internet/network access supports UDP, feedback and content/web access. The app does not request phone location, contacts, microphone, camera or broad storage permissions. It contains no advertising or analytics SDK. Copying JSON writes the selected record to the system clipboard. File backup/restore uses the Android document picker; the destination provider you choose may be a cloud drive. Backup files contain settings and recordings in plain text: keep them private. Weekly cache, web cookies and privacy consent are excluded. Imported backups never grant consent.
+
+6. Your choices
+Before agreement, no UDP listener, address scan, weekly request, feedback submission or WebView is started. You can decline, read this notice, or return later. Review this notice and withdraw in Settings; withdrawal stops these services and returns to the notice without deleting settings or recordings. Data management lets you back up, restore or delete recordings. Android app-data clearing/uninstall removes local data; export and verify a backup first. A changed policy version requires agreement again. Contact the address above for privacy requests.
 
 Usage notice
 This app supports in-game driving and navigation. Experimental UDP fields and game map alignment still require real-game validation. Pause, rewind and interruptions may affect race detection. Third-party guide copyright remains with its authors. This app is free and has no advertising.''';
@@ -46,11 +49,14 @@ This app supports in-game driving and navigation. Experimental UDP fields and ga
 三、第三方网页
 只有主动打开攻略时才创建 WebView。小黑盒和 Forza 网站会收到网络请求，并可能按其自身政策使用 Cookie、网页存储及您主动输入的账号信息；本应用不读取密码。跨站 HTTPS 链接经确认后交由系统浏览器打开，My Forza 同样在系统浏览器打开。浏览器数据由浏览器管理。撤回同意会清除本应用 WebView 的 Cookie 和网页本地存储。
 
-四、权限、导出与保存
-安卓网络权限用于 UDP、内容及网页读取。不申请手机定位、通讯录、麦克风、相机或广泛存储权限；当前未集成广告或统计 SDK。主动复制 JSON 会把该记录写入系统剪贴板。文件备份与恢复使用安卓系统文件选择器，您选择的目标也可能是云盘。备份以明文包含设置及驾驶记录，请妥善保管；不含周内容缓存、网页 Cookie 或隐私同意，导入不会代替同意。
+四、问题反馈
+点击「发送反馈」后，应用通过 HTTPS 向开发者网站 ninaaa.cloud 提交您填写的问题描述、平台、可取得的应用版本和随机反馈编号。网站处理请求时会收到网络 IP 地址。开发者使用反馈排查问题，仅授权网站管理员可查看，反馈最长保留 90 天。应用不会附带设置、驾驶记录、位置、设备标识或日志。请勿填写密码或个人信息。如需删除已提交的反馈，请通过上述邮箱联系并提供反馈编号。
 
-五、您的选择
-同意前不启动 UDP、地址扫描、周内容请求或 WebView。您可拒绝、阅读政策或稍后再决定。在设置可再次查看并撤回；撤回停止上述服务并返回告知页，不删除设置和记录。数据管理可备份、恢复或删除记录。系统清除应用数据或卸载会删除本地数据，请先导出并验证备份。政策版本变化时再次征求同意。隐私请求请联系上述邮箱。
+五、权限、导出与保存
+安卓网络权限用于 UDP、问题反馈、内容及网页访问。不申请手机定位、通讯录、麦克风、相机或广泛存储权限；当前未集成广告或统计 SDK。主动复制 JSON 会把该记录写入系统剪贴板。文件备份与恢复使用安卓系统文件选择器，您选择的目标也可能是云盘。备份以明文包含设置及驾驶记录，请妥善保管；不含周内容缓存、网页 Cookie 或隐私同意，导入不会代替同意。
+
+六、您的选择
+同意前不启动 UDP、地址扫描、周内容请求、反馈提交或 WebView。您可拒绝、阅读政策或稍后再决定。在设置可再次查看并撤回；撤回停止上述服务并返回告知页，不删除设置和记录。数据管理可备份、恢复或删除记录。系统清除应用数据或卸载会删除本地数据，请先导出并验证备份。政策版本变化时再次征求同意。隐私请求请联系上述邮箱。
 
 使用说明
 本应用提供游戏内驾驶辅助。实验 UDP 字段及游戏地图对应关系仍待实测，暂停、回溯或断流可能影响赛事判断。攻略版权归原作者所有。本应用免费且无广告。''';
